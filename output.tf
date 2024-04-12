@@ -1,8 +1,3 @@
-output "storage_integration_name" {
-  description = "Name of Storage integration"
-  value       = snowflake_storage_integration.this.name
-}
-
 output "snowflake_aws_iam_user" {
   description = "Snowflake role from which will access AWS"
   value       = snowflake_storage_integration.this.storage_aws_iam_user_arn
@@ -13,7 +8,7 @@ output "snowflake_aws_external_id" {
   value       = snowflake_storage_integration.this.storage_aws_external_id
 }
 
-output "aws_iam_policy_document" {
-  description = "AWS Policy"
-  value       = aws_iam_policy.policy.name
+output "aws_iam_role_arn" {
+  description = "AWS Role"
+  value       = aws_iam_role.snowflake_aws_integration_role.arn
 }

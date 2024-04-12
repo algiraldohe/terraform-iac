@@ -1,7 +1,9 @@
 # Required Variables
 locals {
   s3_bucket_arn       = "arn:aws:s3:::vindow-data-replication-test2-dev-mongodb2"
-  aws_iam_policy_name = "random-aws_name-x"
+  aws_iam_role        = "tf-test-vindow-data-replication-dev-snowflake"
+  aws_iam_role_arn    = "arn:aws:iam::157367673944:role/tf-test-vindow-data-replication-dev-snowflake"
+  aws_iam_policy_name = "tf-test-s3-reader-policy"
 }
 
 
